@@ -1,0 +1,206 @@
+*{
+    margin: 2px;
+    user-select: none;
+}
+body{
+    background-color: rgb(238, 237, 237);
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+.container{
+    max-width: 430px;
+    height: 530px;
+    aspect-ratio: 43/55;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px 0px #c3c1c1;
+    flex-wrap: wrap;
+}
+.box{
+    margin-top: 10px;
+    width: 350px;
+    height: 70px;
+    background-color: rgb(39, 168, 248);
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 10px;
+    font-size: 35px;
+    font-weight: 550;
+    color: white;
+    font-family: 'Segoe UI';
+    overflow: auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    gap: 7px;
+}
+button{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    height: 70px;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 550;
+    -webkit-tap-highlight-color: transparent;
+}
+.num, .dot{
+    background-color: rgb(223, 221, 221);
+    font-size: 30px;
+    font-weight: 550;
+    color: black;
+}
+.percent, .sqrt, .CE, .C, .sub, .div{
+    font-size: 30px;
+}
+.mul{
+    font-size: 25px;
+}
+.add{
+    font-size: 25px;
+}
+.sin, .cos, .tan, .log, .exp{
+    font-weight: 530;
+    font-size: 20px;
+}
+.equal{
+    font-size: 30px;
+}
+.exp{
+    font-size: 18px;
+}
+button:hover{
+    background-color: rgb(200, 198, 198);
+    cursor: pointer;
+}
+ .C{
+    background-color: rgb(2, 6, 125);
+    color: white;
+}
+.sub{
+    color: white;
+    background-color: rgb(255, 19, 74);
+}
+.div{
+    color: white;
+    background-color: rgb(34, 155, 255);
+}
+.mul{
+    color: white;
+    background-color: rgb(231, 231, 3);
+}
+.add{
+    color: white;
+    background-color: rgb(56, 179, 56);
+}
+.C:hover{
+    background-color: rgb(1, 4, 104);
+}
+.add:hover{
+    background-color: rgb(45, 145, 45);
+}
+.sub:hover{
+    background-color: rgb(206, 15, 60);
+}
+.div:hover{
+    background-color: rgb(26, 120, 198);
+}
+.mul:hover{
+    background-color: rgb(191, 191, 2);
+} 
+.ob, .cb{
+    font-size: 25px;
+}
+
+.container{
+    animation: animation_1 1s ease 1;
+}
+
+@keyframes animation_1{
+    from{
+        transform: translateY(1000px);
+    }
+    to{
+
+    }
+}
+
+@keyframes animation_2 {
+    from{
+        
+    }
+    to{
+        transform: scale(0.5) translateY(-20px) translateX(40px);
+        
+    }
+}
+
+
+
+/* Media query */
+@media only screen and (max-width: 450px){
+    .container{
+        width: 360px;
+        height: 500px;
+    }
+    .box{
+        width: 300px;
+        height: 60px;
+        font-size: 30px;
+    }
+    .grid{
+        grid-template-columns: 60px 60px 60px 60px 60px;
+    }
+    button{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+    }
+
+}
+@media only screen and (max-height: 550px){
+    .container{
+        aspect-ratio: 43/55;
+    }
+}
+@media only screen and (max-width: 390px){
+    button{
+        width: 50px;
+        height: 50px;
+    }
+    .grid{
+        grid-template-columns: 50px 50px 50px 50px 50px;
+        gap: 5px;
+    }
+    .box{
+        width: 250px;
+        height: 55px;
+        font-size: 22px;
+    }
+    .container{
+        width: 300px;
+        height: 400px;
+    }
+    .percent, .exp, .CE, .C, .sub, .div{
+        font-size: 24px;
+    }
+    .sin, .cos, .tan, .log, .exp{
+        font-weight: 530;
+        font-size: 15px;
+    }
+    .num, .dot, .equal{
+        font-size: 24px;
+    }
+    .ob, .cb{
+        font-size: 18px;
+    }
+}
