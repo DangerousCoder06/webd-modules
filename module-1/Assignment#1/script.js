@@ -50,7 +50,10 @@ function main(){
 
         box.textContent = eval(box.textContent);
 
-        box.textContent = parseFloat((box.textContent)).toExponential(7);
+        if(box.textContent.length > 12){
+
+            box.textContent = parseFloat((box.textContent)).toExponential(7);
+        }
 
     } catch (error) {
 
