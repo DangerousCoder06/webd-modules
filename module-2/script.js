@@ -57,7 +57,7 @@ async function getData(link) {
         return data;
     }
     catch(err) {
-        throw new Error("🚨 Network error! Please check your connection.");
+        throw new Error("⚠️ User not found.");
     }
 }
 
